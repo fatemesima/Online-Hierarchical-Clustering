@@ -29,7 +29,16 @@ In this project, I have implemented their **online/streaming versions (OHAC and 
 - **OTD (Online Tree Divisive Clustering)**  
   Online version of Tree Divisive clustering for streaming environments.  
   Based on: *Fisher & Salzberg (1989), "Online Hierarchical Clustering Approximations"*  
+---
+## ⏱️ Runtime Comparison
+
+![Runtime Comparison] ## ⏱️ Runtime Comparison
+
+![Runtime Comparison](Online-Hierarchical-Clustering/download.png))
 
 ---
-
-## 🗂️ Repository Structure
+## 📖 References
+- Menon, Aditya Krishna, Anand Rajagopalan, Baris Sumengen, Gui Citovsky, Qin
+Cao, and Sanjiv Kumar. ”Online hierarchical clustering approximations.” arXiv preprint
+arXiv:1909.09667 (2019).  
+  [🔗 Paper link](https://arxiv.org/abs/1909.09667)
