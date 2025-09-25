@@ -38,7 +38,9 @@ In particular, this repository includes:
   Based on: *Fisher & Salzberg (1989), "Online Hierarchical Clustering Approximations"*  
 - **OTD (Online Tree Divisive Clustering)**  
   Online version of Tree Divisive clustering for streaming environments.  
-  Based on: *Fisher & Salzberg (1989), "Online Hierarchical Clustering Approximations"* - **OPRC (Online Projected Random Cut) → *Proposed Method***  
+  Based on: *Fisher & Salzberg (1989), "Online Hierarchical Clustering Approximations"*
+
+- **OPRC (Online Projected Random Cut) → *Proposed Method***  
   - Designed to extend PRC into an **online setting**.  
   - Works by projecting high-dimensional data into 1D and then applying a dynamic version of RCT (ORC).  
   - Algorithm dynamically inserts new points into the existing tree structure without recomputing from scratch.  
