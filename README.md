@@ -7,8 +7,13 @@ The work was developed as part of my Master's thesis on **data stream clustering
 
 ## 📌 Overview
 
-Traditional hierarchical clustering algorithms (such as HAC) are offline and require the entire dataset to be available beforehand.  
-In this project, I have implemented their **online/streaming versions (OHAC and OTD)** that can incrementally update the cluster structure as new data points arrive.  
+Traditional hierarchical clustering algorithms (such as HAC) are **offline** and require the entire dataset to be available beforehand.  
+To address this limitation, we explore and implement several **online/streaming hierarchical clustering algorithms** that can incrementally update the cluster structure as new data points arrive.  
+
+In particular, this repository includes:  
+- **Offline algorithms:** RCT and PRC  
+- **Online/streaming algorithms:** OHAC, OTD, and our proposed method **OPRC**  
+
 
 ---
 
@@ -20,15 +25,24 @@ In this project, I have implemented their **online/streaming versions (OHAC and 
 
 - **TD (Tree Divisive Clustering)**  
   Standard top-down hierarchical clustering, applied to the whole dataset.  
+- **RCT (Random Cut Tree):**  
+  Constructs a binary partitioning of the dataset by recursively cutting intervals using uniformly random splits.  
 
+- **PRC (Projected Random Cut):**  
+  - A multidimensional extension of RCT.  
+  - Projects the data into 1D using a Gaussian random vector, then applies the Random Cut procedure.  
+  - Offline by design since it requires all data points to be available in advance.  
 ### Online / Streaming Algorithms
 - **OHAC (Online Hierarchical Agglomerative Clustering)**  
   Online adaptation of HAC for streaming data.  
   Based on: *Fisher & Salzberg (1989), "Online Hierarchical Clustering Approximations"*  
-
 - **OTD (Online Tree Divisive Clustering)**  
   Online version of Tree Divisive clustering for streaming environments.  
-  Based on: *Fisher & Salzberg (1989), "Online Hierarchical Clustering Approximations"*  
+  Based on: *Fisher & Salzberg (1989), "Online Hierarchical Clustering Approximations"*  - **OPRC (Online Projected Random Cut) → *Proposed Method***  
+  - Designed to extend PRC into an **online setting**.  
+  - Works by projecting high-dimensional data into 1D and then applying a dynamic version of RCT (ORC).  
+  - Algorithm dynamically inserts new points into the existing tree structure without recomputing from scratch.  
+  - ⚠️ While in theory OPRC may seem inefficient in worst-case scenarios, our **empirical results demonstrate strong performance and fast runtime in practice**.  
 ---
 ## ⏱️ Runtime Comparison
 
